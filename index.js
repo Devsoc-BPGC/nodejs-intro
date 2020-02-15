@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 
+// Connect to database
+const connectDB = require('./config/db');
+connectDB();
+
 // Middleware
 app.use(morgan('dev'));
 
