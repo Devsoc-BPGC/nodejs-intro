@@ -14,9 +14,11 @@ app.use(bodyParser.urlencoded({ extended:true }));
 
 // Import routers
 const postRoutes = require('./routes/posts');
+const userRoutes = require('./routes/users');
 
 // Set up routes
 app.use('/posts', postRoutes);
+app.use('/users', userRoutes);
 
 // Start server
 const PORT = process.env.PORT || 3000;
